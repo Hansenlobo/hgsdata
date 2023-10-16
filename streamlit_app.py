@@ -12,6 +12,9 @@ supabase_url = "https://limsreghccqklsgvxjax.supabase.co"
 supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxpbXNyZWdoY2Nxa2xzZ3Z4amF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTcyOTgwNDUsImV4cCI6MjAxMjg3NDA0NX0.dy-64UAX73Pycuqk7fjltLibnnVlVZvKNA7OHmg5sNA"
 table_name="dts"
 
+supabase_url = st.secrets["supabase_url"]
+supabase_key = st.secrets["supabsupabase_key"]
+
 
 
 while True:
