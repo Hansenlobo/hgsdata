@@ -1,19 +1,22 @@
 import plost
+import os
 import requests
 import pandas as pd
 import streamlit as st
 from datetime import date
+from dotenv import load_dotenv
 from datetime import datetime, timedelta
+load_dotenv()
 
 # Initial Setup
 st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 
-supabase_url = "https://limsreghccqklsgvxjax.supabase.co"
-supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxpbXNyZWdoY2Nxa2xzZ3Z4amF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTcyOTgwNDUsImV4cCI6MjAxMjg3NDA0NX0.dy-64UAX73Pycuqk7fjltLibnnVlVZvKNA7OHmg5sNA"
+# supabase_url = "https://limsreghccqklsgvxjax.supabase.co"
+# supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxpbXNyZWdoY2Nxa2xzZ3Z4amF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTcyOTgwNDUsImV4cCI6MjAxMjg3NDA0NX0.dy-64UAX73Pycuqk7fjltLibnnVlVZvKNA7OHmg5sNA"
 table_name="dts"
 
-supabase_url = st.secrets["supabase_url"]
-supabase_key = st.secrets["supabsupabase_key"]
+supabase_url = os.getenv("supabase_url")
+supabase_key = os.getenv("supabase_key")
 
 
 
