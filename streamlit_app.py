@@ -185,7 +185,7 @@ def calculate_percentage_change(old_value, new_value):
         percentage_change = ((new_value - 1) / 1) * 100
         return ""  # Avoid division by zero
     percentage_change = ((new_value - old_value) / old_value) * 100
-    return str(round(percentage_change))+"&"
+    return str(round(percentage_change))+"%"
 
 with col1:
     st.markdown(f'<div style="{box_style}"><b style="font-size: 18px">Today\'s Sales:</b><br><b style="font-size: 36px">{sum_b}</b><br><span style="{positive_style if sum_b - sum_b_yesterday > 0 else negative_style}">{calculate_percentage_change(sum_b_yesterday,sum_b)}</span> </div>', unsafe_allow_html=True)
